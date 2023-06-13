@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import InfoProps from '../interfaces/SubmitButtonFrom'
+import InfoProps from '../interfaces/SubmitButtonForm'
 
 const ButtonForm = styled.input`
     display: block;

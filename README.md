@@ -16,6 +16,11 @@ https://www.donggukschedule.com/
 
 <br>
 
+## 데모영상
+[https://drive.google.com/file/d/1E_4jQ8KfiZIGQTgO5fNpceyHdojDG318/view?usp=drive_link](https://drive.google.com/file/d/1E_4jQ8KfiZIGQTgO5fNpceyHdojDG318/view?usp=sharing)
+
+<br>
+
 ## 프로젝트 소개
 javascript 오픈소스 **fullcalendar**을 이용해 기존 이클래스의 ‘내할일보기’ 탭의 기능을 확장한 학교중심의 일정관리시스템을 구현하였다.
 교수와 학생 모두가 과제,발표,시험등의 학교일정과 개인일정을 한 곳에서 유연하게 관리할 수 있는서비스를 제공하고 
@@ -23,9 +28,39 @@ javascript 오픈소스 **fullcalendar**을 이용해 기존 이클래스의 ‘
 
 <br>
 
+## 개발 환경  
+```
+Back-End  
+
+JAVA 17
+Spring Boot 2.6.7
+Spring Security
+JWT Token
+Spring Data JPA
+JPA(JPQL)
+AWS EC2
+RDS PostgreSQL
+AWS ELB(Elastic Load Balencer)
+Route 53
+AMI(Amazon Machine Image)
+AWS Amplify
+ACM(Amazon Certificate Manager)
+```
+
+```
+Front-End
+
+HTML
+CSS
+Javascript
+Typescript
+React
+Recoil
+```
+
+<br>
+
 ## 시작가이드
-### Requirements
-for building and running the application you need,
 
 ### installation
 ```
@@ -33,7 +68,23 @@ git clone https://github.com/CSID-DGU/2023-1-OSSProj-NoQuestionMark-2.git
 ```
 ### Backend
 ```
+ ** application.yml 파일에 있는 secret 키를 모두 입력 후 가동 가능  
 
+ spring.datasource  
+ - url: RDS postgreSQL url 정보  
+ - username: postrgreSQL에서 사용하는 username  
+ - password: postrgreSQL에서 사용하는 password  
+ 
+ jwt  
+ - secret-key: 토큰 값을 암호화 하는 키 값  
+ - token.expired-time-ms:  토큰 만료 시간  
+ 
+ bot  
+ - token: 텔레그램 봇에 할당된 token 값  
+ - username: 텔레그램 봇의 이름  
+ - chatId: 텔레그램 채팅방의 아이디  
+ 
+java -jar schedular-0.0.1-SNAPSHOT.jar  
 ```
 
 ### Front-end
@@ -99,26 +150,17 @@ SpringDataJPA , JPA(JPQL) , Recoil
 
 <br>
 
-## Test Account
-|user|id|pw|
-|---|---|---|
-|PROFESSOR|||
-|STUDENT|||
-
-<br>
-
 ## 아키텍쳐
-
-##
+![image](https://github.com/CSID-DGU/2023-1-OSSProj-NoQuestionMark-2/assets/79756267/ffc46079-7336-4666-b097-4639014d99c8)
 
 <br>
 
 ## 개발 팀 소개
-|이름|역할|
-|---|---|
-|이중원|BE, DB설계,클라우드인프라설계,로그인&회원가입기능CRUD기능생성, 과제 및 일정상세보기,UX/UI기획| |
-|박지혜 @bgs-study |FE, 회원가입, 캘린더 - 월간/주간/일간일정보기,일정등록 및 수정, 상세보기, 해야할 일, 완료한 일, 필터링, UX/UI기획|qkrwlgp235@gmail.com|
-|은정민|FE, 홈화면,로그인일정, 이클래스 일정등록, 수정, 삭제 및 상세보기 , UX/UI기획||
+|이름|역할|e-mail|
+|---|---|---|
+|이중원|BE, DB설계,클라우드인프라설계,로그인&회원가입기능CRUD기능생성, 과제 및 일정상세보기,UX/UI기획|dlwnddnjs96@naver.com |
+|박지혜|FE, 회원가입, 캘린더 - 월간/주간/일간일정보기,일정등록 및 수정, 상세보기, 해야할 일, 완료한 일, 일정필터링, UX/UI기획|qkrwlgp235@gmail.com|
+|은정민|FE, 홈화면,로그인일정, 이클래스 일정등록, 수정, 삭제 및 상세보기 , UX/UI기획|dmswjdals12@naver.com|
 
 <br>
 
